@@ -1,8 +1,8 @@
 #include "manager.h"
 
 void listInfo(Car *slist, int count){
- printf("\nNo\tName\tCar Name\tprice\tRental Time\tRental Type\n");
- printf("====================================================\n");
+ printf("\nNo\tName\tCar Name\tlocation\tprice\tRental Time\tRental Type(¿¿:1, ¿¿:0)\n");
+ printf("=================================================================================\n");
  for(int i =0; i <count ; i++){
      if(slist[i].price==-1)
      continue;
