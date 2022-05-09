@@ -104,7 +104,6 @@ void calculatePrice(Car *slist){
     int tprice=(slist->price)*(slist->rentalTime);
     printf("총가격은: %d원 입니다.\n",tprice);
 }
-
 void searchByName (Car *slist, int count){
     int scnt = 0;
     char search[20];
@@ -122,7 +121,7 @@ void searchByName (Car *slist, int count){
             scnt++;
         }
     }
-    if (scnt == 0) printf("");
+    if (scnt == 0) printf("일치하는 사용자 이름이 없습니다.\n");
     printf("\n");
 }
 
@@ -143,8 +142,26 @@ void searchByModel (Car *slist, int count){
             scnt++;
         }
     }
-    if (scnt == 0) printf("");
+    if (scnt == 0) printf("일치하는 차종이 없습니다.\n");
     printf("\n");
 }
-void searchByTime (Car *slist, int count);
+void searchByTime (Car *slist, int count) {
+    int scnt = 0;
+    int search;
 
+    printf("찾으시는 대여 시간을 입력하세요. ");
+    scanf("%d", search);
+
+    printf("\nNo\tName\tCar Name\tprice\tRental Time\tRental Type\n");
+    printf("====================================================\n");
+    for (int i = 0; i < count; i++){
+        if (slist[i].price == -1) continue;
+        if (slist[i].rentalTime == search){
+            printf("%2d", i+1);
+            readInfo(&slist[i]);
+            scnt++;
+        }
+    }
+    if (scnt == 0) printf("일치하는 대여 시간이 없습니다.\n");
+    printf("\n");
+}
