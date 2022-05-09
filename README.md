@@ -7,7 +7,6 @@
 ## 그린카 이미지
 ![baa3c9905706b1031847ecd0460ea90b](https://user-images.githubusercontent.com/61617997/166147046-e99dfc2d-83d7-4e90-a2c2-7702099e4406.jpg)
 
-![image](./screenshots/a.png)
 
 ## mini project 가 가지고 있는 대략적인 기능 설명
 - 구조체: 데이터 타입은 int 대여시간 , char[20] 차종, int 대여유형, char[20] 목적지, 사용자 이름 char[20]
