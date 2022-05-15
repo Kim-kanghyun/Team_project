@@ -2,7 +2,11 @@
 
 void listInfo(Car *slist, int count){
  printf("\nNo\tName\tCar Name\tlocation\tprice\tRental Time\tRental Type\n");
+<<<<<<< HEAD
  printf("==================================================================\n");
+=======
+ printf("=================================================================================\n");
+>>>>>>> 0bd395acbe0679b4a2756a7ae55600323e63ce5b
  for(int i =0; i <count ; i++){
      if(slist[i].price==-1)
      continue;
