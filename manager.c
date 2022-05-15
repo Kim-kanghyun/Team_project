@@ -2,11 +2,7 @@
 
 void listInfo(Car *slist, int count){
  printf("\nNo\tName\tCar Name\tlocation\tprice\tRental Time\tRental Type\n");
-<<<<<<< HEAD
- printf("==================================================================\n");
-=======
- printf("=================================================================================\n");
->>>>>>> 0bd395acbe0679b4a2756a7ae55600323e63ce5b
+ printf("==================================================================\n"); 
  for(int i =0; i <count ; i++){
      if(slist[i].price==-1)
      continue;
@@ -19,7 +15,7 @@ void listInfo(Car *slist, int count){
 int selectDataNum(Car *s, int count){
  int num;
  listInfo(s, count);
- printf("¹øÈ£´Â (Ãë¼Ò :0)? ");
+ printf("¿¿¿ (¿¿ :0)? ");
  scanf("%d", &num);
  return num;
 }
@@ -33,7 +29,7 @@ void saveData(Car slist[], int count) {
  }
  
  fclose(fp);
- printf("¿¿¿!\n);  
+ printf("¿¿¿!\n");  
 
 }
 
@@ -49,10 +45,11 @@ int loadData(Car *slist)  {
 		count++;
  	}
 	fclose(fp);
- printf("=>¿¿¿¿!\n");
+ printf("=>¿¿ ¿¿!\n");
  }
 
  return count;
 
 }
+
 
