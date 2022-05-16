@@ -150,7 +150,7 @@ void searchByTime (Car *slist, int count) {
     int search;
 
     printf("찾으시는 대여 시간을 입력하세요. ");
-    scanf("%d", search);
+    scanf("%d", &search);
 
     printf("\nNo\tName\tCar Name\tprice\tRental Time\tRental Type\n");
     printf("====================================================\n");
