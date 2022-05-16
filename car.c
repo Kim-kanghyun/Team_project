@@ -2,58 +2,59 @@
 
 int selectMenu(){
 int menu;
- printf("\n*** ë Œí„°ì¹´ ì„œë¹„ìŠ¤ ***\n");
- printf("1. ì¡°íšŒ\n");
- printf("2. ì¶”ê°€\n");
- printf("3. ìˆ˜ì •\n");
- printf("4. ì‚­ì œ\n");
- printf("5. ëŒ€ì—¬ ì‹œê°„ ê³„ì‚°\n");
- printf("6. ê°€ê²© ê³„ì‚°\n");
- printf("7. ì´ë¦„ ê²€ìƒ‰\n");
- printf("8. ëŒ€ì—¬ì‹œê°„ ê²€ìƒ‰\n");
- printf("9. ì°¨ì¢… ê²€ìƒ‰\n"); 
- printf("0. ì¢…ë£Œ\n\n");
- printf("=> ì›í•˜ëŠ” ë©”ë‰´ëŠ”? ");
+ printf("\n*** ·»ÅÍÄ« ¼­ºñ½º ***\n");
+ printf("1. Á¶È¸\n");
+ printf("2. Ãß°¡\n");
+ printf("3. ¼öÁ¤\n");
+ printf("4. »èÁ¦\n");
+ printf("5. ´ë¿© ½Ã°£ °è»ê\n");
+ printf("6. °¡°İ °è»ê\n");
+ printf("7. ÀÌ¸§ °Ë»ö\n");
+ printf("8. ´ë¿©½Ã°£ °Ë»ö\n");
+ printf("9. Â÷Á¾ °Ë»ö\n"); 
+ printf("10. µ¥ÀÌÅÍ ÀúÀå\n"); 
+ printf("0. Á¾·á\n\n");
+ printf("=> ¿øÇÏ´Â ¸Ş´º´Â? ");
  scanf("%d", &menu);
 return menu;
 }
 
 int createInfo(Car *s1){
-    printf("ì‚¬ìš©ì ì´ë¦„ì€? ");
+    printf("»ç¿ëÀÚ ÀÌ¸§Àº? ");
     scanf("%s",s1->name);
-    printf("ì°¨ ì´ë¦„ì€? ");
+    printf("Â÷ ÀÌ¸§Àº? ");
     scanf("%s",s1->carName);
-    printf("ëª©ì ì§€ëŠ”? ");
+    printf("¸ñÀûÁö´Â? ");
     scanf("%s",s1->location);
-    printf("ê°€ê²©ì€? ");
+    printf("°¡°İÀº? ");
     scanf("%d",&s1->price);
-    printf("ëŒ€ì—¬ìœ í˜•ì€? (ì™•ë³µ:1, í¸ë„:0) ");
+    printf("´ë¿©À¯ÇüÀº? (¿Õº¹:1, Æíµµ:0) ");
     scanf("%d",&s1->rentalType);
-    printf("ëŒ€ì—¬ì‹œê°„ì€? (ë‹¨ìœ„: ë¶„)");
+    printf("´ë¿©½Ã°£Àº? (´ÜÀ§: ºĞ)");
     scanf("%d",&s1->rentalTime);
-    printf("=> ì¶”ê°€ë¨!");
+    printf("=> Ãß°¡µÊ!");
     return 1;
 }
 
 void readInfo(Car * s) {
-    printf("%13s %14s %20s %10dì› %12dë¶„ %14d\n",s->name, s->carName, s->location, s->price, s->rentalTime, s->rentalType);
+    printf("%13s %14s %20s %10d¿ø %12dºĞ %14d\n",s->name, s->carName, s->location, s->price, s->rentalTime, s->rentalType);
 
 }
 
 int updateInfo(Car *s1){
-    printf("ì‚¬ìš©ì ì´ë¦„ì€? ");
+    printf("»ç¿ëÀÚ ÀÌ¸§Àº? ");
     scanf("%s",s1->name);
-    printf("ì°¨ ì´ë¦„ì€? ");
+    printf("Â÷ ÀÌ¸§Àº? ");
     scanf("%s",s1->carName);
-    printf("ëª©ì ì§€ëŠ”? ");
+    printf("¸ñÀûÁö´Â? ");
     scanf("%s",s1->location);
-    printf("ê°€ê²©ì€? ");
+    printf("°¡°İÀº? ");
     scanf("%d",&s1->price);
-    printf("ëŒ€ì—¬ìœ í˜•ì€? (ì™•ë³µ:1, í¸ë„:0) ");
+    printf("´ë¿©À¯ÇüÀº? (¿Õº¹:1, Æíµµ:0) ");
     scanf("%d",&s1->rentalType);
-    printf("ëŒ€ì—¬ì‹œê°„ì€? (ë‹¨ìœ„: ë¶„)");
+    printf("´ë¿©½Ã°£Àº? (´ÜÀ§: ºĞ)");
     scanf("%d",&s1->rentalTime);
-    printf("=> ìˆ˜ì •ë¨!");
+    printf("=> ¼öÁ¤µÊ!");
     return 1;
 }
 
@@ -61,7 +62,7 @@ int deleteInfo(Car *s) {
     s->rentalTime=-1;
     s->price=-1;
     s->rentalType=-1;
-    printf("==> ì‚­ì œë¨!\n");
+    printf("==> »èÁ¦µÊ!\n");
     return 0;
 
 }
@@ -74,10 +75,10 @@ void calculateTime(){
     int rentalTime;
     int hr,min,totalMin,resMin,resHr;
     totalMin=0;
-    printf("ëŒ€ì—¬ ì‹œì‘ì‹œê°ì„ ì…ë ¥í•˜ì„¸ìš”(ex.16:00)\n");
+    printf("´ë¿© ½ÃÀÛ½Ã°¢À» ÀÔ·ÂÇÏ¼¼¿ä(ex.16:00)\n");
     scanf("%s",startTime);
     strcpy(tmpstTime,startTime);
-    printf("ëŒ€ì—¬ ì‹œê°„ì„ ì…ë ¥í•˜ì„¸ìš”(ë‹¨ìœ„:ë¶„)\n");
+    printf("´ë¿© ½Ã°£À» ÀÔ·ÂÇÏ¼¼¿ä(´ÜÀ§:ºĞ)\n");
     scanf("%d",&rentalTime);
     char *ptr = strtok(startTime, ":");  
     hr=atoi(ptr);
@@ -95,20 +96,20 @@ void calculateTime(){
     if(resMin<10){
         strcat(tmpMin,"0");
     }
-    printf("ëŒ€ì—¬ ì‹œê°„ì€ %s ",tmpstTime);
+    printf("´ë¿© ½Ã°£Àº %s ",tmpstTime);
     strcat(tmpMin,buf);
-    printf("~ %d:%s ì…ë‹ˆë‹¤\n",resHr,tmpMin);    
+    printf("~ %d:%s ÀÔ´Ï´Ù\n",resHr,tmpMin);    
 }
 
 void calculatePrice(Car *slist){
     int tprice=(slist->price)*(slist->rentalTime);
-    printf("ì´ê°€ê²©ì€: %dì› ì…ë‹ˆë‹¤.\n",tprice);
+    printf("ÃÑ°¡°İÀº: %d¿ø ÀÔ´Ï´Ù.\n",tprice);
 }
 void searchByName (Car *slist, int count){
     int scnt = 0;
     char search[20];
 
-    printf("ì°¾ìœ¼ì‹œëŠ” ì‚¬ìš©ì ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”. ");
+    printf("Ã£À¸½Ã´Â »ç¿ëÀÚ ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä. ");
     scanf("%s", search);
  
     printf("\nNo\tName\tCar Name\tprice\tRental Time\tRental Type\n");
@@ -121,7 +122,7 @@ void searchByName (Car *slist, int count){
             scnt++;
         }
     }
-    if (scnt == 0) printf("ì¼ì¹˜í•˜ëŠ” ì‚¬ìš©ì ì´ë¦„ì´ ì—†ìŠµë‹ˆë‹¤.\n");
+    if (scnt == 0) printf("ÀÏÄ¡ÇÏ´Â »ç¿ëÀÚ ÀÌ¸§ÀÌ ¾ø½À´Ï´Ù.\n");
     printf("\n");
 }
 
@@ -129,7 +130,7 @@ void searchByModel (Car *slist, int count){
     int scnt = 0;
     char search[20];
 
-    printf("ì°¾ìœ¼ì‹œëŠ” ì°¨ì¢…ì„ ì…ë ¥í•˜ì„¸ìš”. ");
+    printf("Ã£À¸½Ã´Â Â÷Á¾À» ÀÔ·ÂÇÏ¼¼¿ä. ");
     scanf("%s", search);
 
     printf("\nNo\tName\tCar Name\tprice\tRental Time\tRental Type\n");
@@ -142,15 +143,15 @@ void searchByModel (Car *slist, int count){
             scnt++;
         }
     }
-    if (scnt == 0) printf("ì¼ì¹˜í•˜ëŠ” ì°¨ì¢…ì´ ì—†ìŠµë‹ˆë‹¤.\n");
+    if (scnt == 0) printf("ÀÏÄ¡ÇÏ´Â Â÷Á¾ÀÌ ¾ø½À´Ï´Ù.\n");
     printf("\n");
 }
 void searchByTime (Car *slist, int count) {
     int scnt = 0;
     int search;
 
-    printf("ì°¾ìœ¼ì‹œëŠ” ëŒ€ì—¬ ì‹œê°„ì„ ì…ë ¥í•˜ì„¸ìš”. ");
-    scanf("%d", search);
+    printf("Ã£À¸½Ã´Â ´ë¿© ½Ã°£À» ÀÔ·ÂÇÏ¼¼¿ä. ");
+    scanf("%d", &search);
 
     printf("\nNo\tName\tCar Name\tprice\tRental Time\tRental Type\n");
     printf("====================================================\n");
@@ -162,6 +163,6 @@ void searchByTime (Car *slist, int count) {
             scnt++;
         }
     }
-    if (scnt == 0) printf("ì¼ì¹˜í•˜ëŠ” ëŒ€ì—¬ ì‹œê°„ì´ ì—†ìŠµë‹ˆë‹¤.\n");
+    if (scnt == 0) printf("ÀÏÄ¡ÇÏ´Â ´ë¿© ½Ã°£ÀÌ ¾ø½À´Ï´Ù.\n");
     printf("\n");
 }

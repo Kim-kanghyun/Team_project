@@ -2,7 +2,7 @@
 
 int main(){
     Car slist[20];
-    int count = 0;
+    int count = loadData(slist);
     int index = count;
     int menu;
     while (1) {
@@ -53,10 +53,13 @@ int main(){
             searchByName(slist, index);
             continue;
         } else if (menu==8){
-            //searchByTime(slist, index);
+            searchByTime(slist, index);
             continue;
         } else if (menu==9){
             searchByModel(slist, index);
+            continue;
+        } else if (menu==10){
+            saveData(slist, index);
             continue;
         }
         
