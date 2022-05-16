@@ -15,7 +15,7 @@ void listInfo(Car *slist, int count){
 int selectDataNum(Car *s, int count){
  int num;
  listInfo(s, count);
- printf("¿¿¿ (¿¿ :0)? ");
+ printf("ë²ˆí˜¸ëŠ”(ì·¨ì†Œ :0)? ");
  scanf("%d", &num);
  return num;
 }
@@ -29,7 +29,7 @@ void saveData(Car slist[], int count) {
  }
  
  fclose(fp);
- printf("¿¿¿!\n");  
+ printf("ì €ì¥ë¨!\n");  
 
 }
 
@@ -37,7 +37,7 @@ int loadData(Car *slist)  {
  int count=0;
  FILE* fp;
  fp = fopen("car.txt", "r");
- if(fp==NULL) printf("\n=> ¿¿¿¿\n");
+ if(fp==NULL) printf("\n=> íŒŒì¼ ì—†ìŒ\n");
  else {
 	for(int i=0; i<100; i++) {
                fscanf( fp, "%s %s %s %d %d %d\n", slist[i].name, slist[i].carName, slist[i].location, &slist[i].price, &slist[i].rentalTime, &slist[i].rentalType);
@@ -45,7 +45,7 @@ int loadData(Car *slist)  {
 		count++;
  	}
 	fclose(fp);
- printf("=>¿¿ ¿¿!\n");
+ printf("=>íŒŒì¼ ë¶ˆëŸ¬ì˜´!\n");
  }
 
  return count;
