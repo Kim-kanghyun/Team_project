@@ -8,7 +8,7 @@ int main(){
     while (1) {
         menu = selectMenu();
         if (menu == 0) {
-            printf("¡æ∑·µ !");
+            printf("Ï¢ÖÎ£åÎê®!");
             break;
         }
         if (menu == 1) {
@@ -21,7 +21,7 @@ int main(){
         } else if (menu == 3) {
             int no = selectDataNum(slist, index);
             if (no == 0) {
-                printf("=> √Îº“µ !\n");
+                printf("=> Ï∑®ÏÜåÎê®!\n");
                 continue;
             }
             updateInfo(&slist[no - 1]);
@@ -29,16 +29,16 @@ int main(){
         } else if (menu == 4) {
             int no = selectDataNum(slist, index);
             if (no == 0) {
-                printf("=> √Îº“µ !\n");
+                printf("=> Ï∑®ÏÜåÎê®!\n");
                 continue;
             }
             int deleteok;
-            printf("¡§∏ª∑Œ ªË¡¶«œΩ√∞⁄Ω¿¥œ±Ó?(ªË¡¶ :1)");
+            printf("Ï†ïÎßêÎ°ú ÏÇ≠Ï†úÌïòÏãúÍ≤†ÏäµÎãàÍπå?(ÏÇ≠Ï†ú :1)");
             scanf("%d", & deleteok);
             if (deleteok == 1) {
                 if (deleteInfo(& slist[no - 1])) {
                     count --;
-                    printf("=> ªË¡¶µ !\n ");
+                    printf("=> ÏÇ≠Ï†úÎê®!\n ");
                 };
                 continue;
             }
